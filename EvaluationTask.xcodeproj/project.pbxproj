@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		091061B35B90F30AA1FBC95B /* Pods_EvaluationTask.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51F514556AA31007260C331F /* Pods_EvaluationTask.framework */; };
+		321BD8FD213183E900A16CAA /* AuthToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 321BD8FC213183E900A16CAA /* AuthToken.swift */; };
 		327E4A45212F5D7B00A9EF8A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 327E4A44212F5D7B00A9EF8A /* AppDelegate.swift */; };
 		327E4A47212F5D7B00A9EF8A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 327E4A46212F5D7B00A9EF8A /* ViewController.swift */; };
 		327E4A4A212F5D7B00A9EF8A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 327E4A48212F5D7B00A9EF8A /* Main.storyboard */; };
@@ -27,6 +28,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		321BD8FC213183E900A16CAA /* AuthToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthToken.swift; sourceTree = "<group>"; };
 		327E4A41212F5D7B00A9EF8A /* EvaluationTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EvaluationTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		327E4A44212F5D7B00A9EF8A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		327E4A46212F5D7B00A9EF8A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -61,6 +63,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		321BD8FA213182C500A16CAA /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				321BD8FB2131830300A16CAA /* Entities */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		321BD8FB2131830300A16CAA /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				321BD8FC213183E900A16CAA /* AuthToken.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
 		327E4A38212F5D7B00A9EF8A = {
 			isa = PBXGroup;
 			children = (
@@ -84,6 +102,7 @@
 		327E4A43212F5D7B00A9EF8A /* EvaluationTask */ = {
 			isa = PBXGroup;
 			children = (
+				321BD8FA213182C500A16CAA /* Network */,
 				327E4A44212F5D7B00A9EF8A /* AppDelegate.swift */,
 				327E4A46212F5D7B00A9EF8A /* ViewController.swift */,
 				327E4A48212F5D7B00A9EF8A /* Main.storyboard */,
@@ -224,16 +243,12 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-EvaluationTask/Pods-EvaluationTask-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
@@ -248,15 +263,11 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-EvaluationTask-checkManifestLockResult.txt",
 			);
@@ -274,6 +285,7 @@
 			files = (
 				327E4A47212F5D7B00A9EF8A /* ViewController.swift in Sources */,
 				327E4A45212F5D7B00A9EF8A /* AppDelegate.swift in Sources */,
+				321BD8FD213183E900A16CAA /* AuthToken.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
