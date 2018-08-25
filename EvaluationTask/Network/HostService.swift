@@ -17,8 +17,10 @@ struct HostService {
 struct EvaluatinTaskServiceSettings {
     let headers: [String: String]
     
-    init(requestHeaders: [String : String]) {
-        self.headers = requestHeaders
+    init(authToken: String) {
+        var headersDict:[String: String] = [String: String]()
+        headersDict["Authorization"] = "JWT \(authToken)"
+        headers = headersDict
     }
 }
 

@@ -41,9 +41,9 @@ class NearbyPlacesRequester {
         self.networking = networking
     }
     
-    func requestNearbyPlaces(authToken: String, nearbyPlacesParam: NearbyPlacesParam,
+    func requestNearbyPlaces(nearbyPlacesParam: NearbyPlacesParam,
         completionHandler: @escaping (NearbyPlacesEntity) -> ()) {
-        let specs = RequestSpecs(method: .POST, URLString: nearbyPlacesEndPoint, parameters: productParam.getParameters())
+        let specs = RequestSpecs(method: .POST, URLString: nearbyPlacesEndPoint, parameters: nearbyPlacesParam.getParameters())
         networking.request(specs) { (response, error) -> (Void) in
             let nearbyPlacesDict = response as? [String: AnyObject] ?? [:]
             completionHandler(NearbyPlacesEntity(rawDictionary: nearbyPlacesDict))
