@@ -8,7 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		091061B35B90F30AA1FBC95B /* Pods_EvaluationTask.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51F514556AA31007260C331F /* Pods_EvaluationTask.framework */; };
-		321BD8FD213183E900A16CAA /* AuthToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 321BD8FC213183E900A16CAA /* AuthToken.swift */; };
+		321BD8FD213183E900A16CAA /* AuthTokenEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 321BD8FC213183E900A16CAA /* AuthTokenEntity.swift */; };
+		321BD8FF21319CC800A16CAA /* NearbyPlacesEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 321BD8FE21319CC800A16CAA /* NearbyPlacesEntity.swift */; };
+		321BD9012131A03E00A16CAA /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 321BD9002131A03E00A16CAA /* Common.swift */; };
+		321BD9032131CE7000A16CAA /* NearbyPlacesEntityKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 321BD9022131CE7000A16CAA /* NearbyPlacesEntityKeys.swift */; };
 		327E4A45212F5D7B00A9EF8A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 327E4A44212F5D7B00A9EF8A /* AppDelegate.swift */; };
 		327E4A47212F5D7B00A9EF8A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 327E4A46212F5D7B00A9EF8A /* ViewController.swift */; };
 		327E4A4A212F5D7B00A9EF8A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 327E4A48212F5D7B00A9EF8A /* Main.storyboard */; };
@@ -28,7 +31,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		321BD8FC213183E900A16CAA /* AuthToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthToken.swift; sourceTree = "<group>"; };
+		321BD8FC213183E900A16CAA /* AuthTokenEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthTokenEntity.swift; sourceTree = "<group>"; };
+		321BD8FE21319CC800A16CAA /* NearbyPlacesEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearbyPlacesEntity.swift; sourceTree = "<group>"; };
+		321BD9002131A03E00A16CAA /* Common.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
+		321BD9022131CE7000A16CAA /* NearbyPlacesEntityKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearbyPlacesEntityKeys.swift; sourceTree = "<group>"; };
 		327E4A41212F5D7B00A9EF8A /* EvaluationTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EvaluationTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		327E4A44212F5D7B00A9EF8A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		327E4A46212F5D7B00A9EF8A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -74,7 +80,10 @@
 		321BD8FB2131830300A16CAA /* Entities */ = {
 			isa = PBXGroup;
 			children = (
-				321BD8FC213183E900A16CAA /* AuthToken.swift */,
+				321BD8FC213183E900A16CAA /* AuthTokenEntity.swift */,
+				321BD8FE21319CC800A16CAA /* NearbyPlacesEntity.swift */,
+				321BD9002131A03E00A16CAA /* Common.swift */,
+				321BD9022131CE7000A16CAA /* NearbyPlacesEntityKeys.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -285,7 +294,10 @@
 			files = (
 				327E4A47212F5D7B00A9EF8A /* ViewController.swift in Sources */,
 				327E4A45212F5D7B00A9EF8A /* AppDelegate.swift in Sources */,
-				321BD8FD213183E900A16CAA /* AuthToken.swift in Sources */,
+				321BD8FF21319CC800A16CAA /* NearbyPlacesEntity.swift in Sources */,
+				321BD9012131A03E00A16CAA /* Common.swift in Sources */,
+				321BD8FD213183E900A16CAA /* AuthTokenEntity.swift in Sources */,
+				321BD9032131CE7000A16CAA /* NearbyPlacesEntityKeys.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
