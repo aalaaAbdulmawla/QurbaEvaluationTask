@@ -18,6 +18,8 @@ enum PayloadObjectKeys: String {
     case Location = "location"
     case ShortDescription = "shortDescription"
     case PlaceProfilePictureUrl = "placeProfilePictureUrl"
+    case Categories = "categories"
+    case PlaceProfileCoverPictureUrl = "placeProfileCoverPictureUrl"
 }
 
 enum AddressKeys: String {

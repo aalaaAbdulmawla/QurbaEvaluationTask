@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		091061B35B90F30AA1FBC95B /* Pods_EvaluationTask.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51F514556AA31007260C331F /* Pods_EvaluationTask.framework */; };
+		320DC9562133374500B17393 /* CardViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 320DC9542133374500B17393 /* CardViewCell.swift */; };
+		320DC9572133374500B17393 /* CardViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 320DC9552133374500B17393 /* CardViewCell.xib */; };
+		320DC95A2133378C00B17393 /* CardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 320DC9592133378C00B17393 /* CardViewModel.swift */; };
 		321BD8FD213183E900A16CAA /* AuthTokenEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 321BD8FC213183E900A16CAA /* AuthTokenEntity.swift */; };
 		321BD8FF21319CC800A16CAA /* NearbyPlacesEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 321BD8FE21319CC800A16CAA /* NearbyPlacesEntity.swift */; };
 		321BD9012131A03E00A16CAA /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 321BD9002131A03E00A16CAA /* Common.swift */; };
@@ -44,6 +47,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		320DC9542133374500B17393 /* CardViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewCell.swift; sourceTree = "<group>"; };
+		320DC9552133374500B17393 /* CardViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardViewCell.xib; sourceTree = "<group>"; };
+		320DC9592133378C00B17393 /* CardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewModel.swift; sourceTree = "<group>"; };
 		321BD8FC213183E900A16CAA /* AuthTokenEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthTokenEntity.swift; sourceTree = "<group>"; };
 		321BD8FE21319CC800A16CAA /* NearbyPlacesEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearbyPlacesEntity.swift; sourceTree = "<group>"; };
 		321BD9002131A03E00A16CAA /* Common.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
@@ -96,6 +102,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		320DC9522133369100B17393 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				320DC953213336DC00B17393 /* Cells */,
+				327E4A46212F5D7B00A9EF8A /* CardViewController.swift */,
+				327E4A48212F5D7B00A9EF8A /* Card.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		320DC953213336DC00B17393 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				320DC9542133374500B17393 /* CardViewCell.swift */,
+				320DC9552133374500B17393 /* CardViewCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		320DC9582133376600B17393 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				320DC9592133378C00B17393 /* CardViewModel.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
 		321BD8FA213182C500A16CAA /* Network */ = {
 			isa = PBXGroup;
 			children = (
@@ -173,8 +206,6 @@
 			children = (
 				3296D0D621320B1B0068633C /* MapViewScreen */,
 				3296D0D521320AF90068633C /* CardViewScreen */,
-				327E4A46212F5D7B00A9EF8A /* CardViewController.swift */,
-				327E4A48212F5D7B00A9EF8A /* Card.storyboard */,
 				3296D0D421320AE90068633C /* UserLocation */,
 				3296D0CA2131E9050068633C /* Utiles */,
 				321BD8FA213182C500A16CAA /* Network */,
@@ -223,6 +254,8 @@
 		3296D0D521320AF90068633C /* CardViewScreen */ = {
 			isa = PBXGroup;
 			children = (
+				320DC9582133376600B17393 /* Entities */,
+				320DC9522133369100B17393 /* Views */,
 			);
 			path = CardViewScreen;
 			sourceTree = "<group>";
@@ -339,6 +372,7 @@
 				327E4A4C212F5D7D00A9EF8A /* Assets.xcassets in Resources */,
 				3296D0C32131D8880068633C /* ConnectionStatus.storyboard in Resources */,
 				327E4A4A212F5D7B00A9EF8A /* Card.storyboard in Resources */,
+				320DC9572133374500B17393 /* CardViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -410,9 +444,11 @@
 				3296D0D12131F0320068633C /* AuthTokenRequester.swift in Sources */,
 				3296D0C92131D90D0068633C /* HostService.swift in Sources */,
 				3296D0C42131D8880068633C /* ConnectionObserver.swift in Sources */,
+				320DC95A2133378C00B17393 /* CardViewModel.swift in Sources */,
 				321BD9092131D3EF00A16CAA /* AlomofireAdaptor.swift in Sources */,
 				3296D0D32131F0490068633C /* NearbyPlacesRequester.swift in Sources */,
 				321BD8FF21319CC800A16CAA /* NearbyPlacesEntity.swift in Sources */,
+				320DC9562133374500B17393 /* CardViewCell.swift in Sources */,
 				321BD9072131D3DC00A16CAA /* NetworkInterface.swift in Sources */,
 				321BD9012131A03E00A16CAA /* Common.swift in Sources */,
 				321BD8FD213183E900A16CAA /* AuthTokenEntity.swift in Sources */,

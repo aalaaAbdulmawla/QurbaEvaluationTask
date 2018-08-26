@@ -92,7 +92,9 @@ struct PayloadObject {
     let facilities: [LocalizationStrings]
     let hashtages: [String]
     let shortDescribtion: LocalizationStrings
-    let img: String
+    let profileImg: String
+    let coverImg: String
+    let categories: [LocalizationStrings]
     
     init(rawDictionary: [String: AnyObject]) {
         name = LocalizationStrings(rawDictionary: rawDictionary[PayloadObjectKeys.Name.rawValue] as? [String: AnyObject] ?? [:])
@@ -105,7 +107,11 @@ struct PayloadObject {
         let rawHashtags = rawDictionary[PayloadObjectKeys.Hashtags.rawValue] as? [[String : AnyObject]] ?? [[:]]
         hashtages = rawHashtags.map { ($0[PayloadObjectKeys.Name.rawValue] as? String) ?? "" }
         shortDescribtion = LocalizationStrings(rawDictionary: rawDictionary[PayloadObjectKeys.ShortDescription.rawValue] as? [String: AnyObject] ?? [:])
-        img = rawDictionary[PayloadObjectKeys.PlaceProfilePictureUrl.rawValue] as? String ?? ""
+        profileImg = rawDictionary[PayloadObjectKeys.PlaceProfilePictureUrl.rawValue] as? String ?? ""
+        coverImg = rawDictionary[PayloadObjectKeys.PlaceProfileCoverPictureUrl.rawValue] as? String ?? ""
+        let rawCategories = rawDictionary[PayloadObjectKeys.Categories.rawValue] as? [[String: AnyObject]] ?? [[:]]
+        let rawCategoriesNames = rawCategories.map { $0[PayloadObjectKeys.Name.rawValue] as? [String: AnyObject] ?? [:]}
+        categories = rawCategoriesNames.map { LocalizationStrings(rawDictionary: $0) }
     }
 }
 
