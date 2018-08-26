@@ -16,8 +16,8 @@
 		321BD9092131D3EF00A16CAA /* AlomofireAdaptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 321BD9082131D3EF00A16CAA /* AlomofireAdaptor.swift */; };
 		321BD90B2131D67200A16CAA /* NSError+Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 321BD90A2131D67200A16CAA /* NSError+Networking.swift */; };
 		327E4A45212F5D7B00A9EF8A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 327E4A44212F5D7B00A9EF8A /* AppDelegate.swift */; };
-		327E4A47212F5D7B00A9EF8A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 327E4A46212F5D7B00A9EF8A /* ViewController.swift */; };
-		327E4A4A212F5D7B00A9EF8A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 327E4A48212F5D7B00A9EF8A /* Main.storyboard */; };
+		327E4A47212F5D7B00A9EF8A /* CardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 327E4A46212F5D7B00A9EF8A /* CardViewController.swift */; };
+		327E4A4A212F5D7B00A9EF8A /* Card.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 327E4A48212F5D7B00A9EF8A /* Card.storyboard */; };
 		327E4A4C212F5D7D00A9EF8A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 327E4A4B212F5D7D00A9EF8A /* Assets.xcassets */; };
 		327E4A4F212F5D7D00A9EF8A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 327E4A4D212F5D7D00A9EF8A /* LaunchScreen.storyboard */; };
 		327E4A5A212F5D7E00A9EF8A /* EvaluationTaskTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 327E4A59212F5D7E00A9EF8A /* EvaluationTaskTests.swift */; };
@@ -30,6 +30,7 @@
 		3296D0CE2131EA460068633C /* TopViewControllerFinder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3296D0CD2131EA460068633C /* TopViewControllerFinder.swift */; };
 		3296D0D12131F0320068633C /* AuthTokenRequester.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3296D0D02131F0320068633C /* AuthTokenRequester.swift */; };
 		3296D0D32131F0490068633C /* NearbyPlacesRequester.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3296D0D22131F0490068633C /* NearbyPlacesRequester.swift */; };
+		3296D0D821320E5A0068633C /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3296D0D721320E5A0068633C /* CoreLocation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,8 +53,8 @@
 		321BD90A2131D67200A16CAA /* NSError+Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSError+Networking.swift"; sourceTree = "<group>"; };
 		327E4A41212F5D7B00A9EF8A /* EvaluationTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EvaluationTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		327E4A44212F5D7B00A9EF8A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		327E4A46212F5D7B00A9EF8A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		327E4A49212F5D7B00A9EF8A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		327E4A46212F5D7B00A9EF8A /* CardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewController.swift; sourceTree = "<group>"; };
+		327E4A49212F5D7B00A9EF8A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Card.storyboard; sourceTree = "<group>"; };
 		327E4A4B212F5D7D00A9EF8A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		327E4A4E212F5D7D00A9EF8A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		327E4A50212F5D7D00A9EF8A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -69,6 +70,7 @@
 		3296D0CD2131EA460068633C /* TopViewControllerFinder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopViewControllerFinder.swift; sourceTree = "<group>"; };
 		3296D0D02131F0320068633C /* AuthTokenRequester.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthTokenRequester.swift; sourceTree = "<group>"; };
 		3296D0D22131F0490068633C /* NearbyPlacesRequester.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearbyPlacesRequester.swift; sourceTree = "<group>"; };
+		3296D0D721320E5A0068633C /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		51F514556AA31007260C331F /* Pods_EvaluationTask.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EvaluationTask.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7846D1BAE4D4ED2F027A7A2 /* Pods-EvaluationTask.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EvaluationTask.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EvaluationTask/Pods-EvaluationTask.debug.xcconfig"; sourceTree = "<group>"; };
 		FF4405CAFC04AD1910A1492A /* Pods-EvaluationTask.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EvaluationTask.release.xcconfig"; path = "Pods/Target Support Files/Pods-EvaluationTask/Pods-EvaluationTask.release.xcconfig"; sourceTree = "<group>"; };
@@ -79,6 +81,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3296D0D821320E5A0068633C /* CoreLocation.framework in Frameworks */,
 				091061B35B90F30AA1FBC95B /* Pods_EvaluationTask.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -168,11 +171,14 @@
 		327E4A43212F5D7B00A9EF8A /* EvaluationTask */ = {
 			isa = PBXGroup;
 			children = (
+				3296D0D621320B1B0068633C /* MapViewScreen */,
+				3296D0D521320AF90068633C /* CardViewScreen */,
+				327E4A46212F5D7B00A9EF8A /* CardViewController.swift */,
+				327E4A48212F5D7B00A9EF8A /* Card.storyboard */,
+				3296D0D421320AE90068633C /* UserLocation */,
 				3296D0CA2131E9050068633C /* Utiles */,
 				321BD8FA213182C500A16CAA /* Network */,
 				327E4A44212F5D7B00A9EF8A /* AppDelegate.swift */,
-				327E4A46212F5D7B00A9EF8A /* ViewController.swift */,
-				327E4A48212F5D7B00A9EF8A /* Main.storyboard */,
 				327E4A4B212F5D7D00A9EF8A /* Assets.xcassets */,
 				327E4A4D212F5D7D00A9EF8A /* LaunchScreen.storyboard */,
 				327E4A50212F5D7D00A9EF8A /* Info.plist */,
@@ -207,9 +213,31 @@
 			path = Requests;
 			sourceTree = "<group>";
 		};
+		3296D0D421320AE90068633C /* UserLocation */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UserLocation;
+			sourceTree = "<group>";
+		};
+		3296D0D521320AF90068633C /* CardViewScreen */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CardViewScreen;
+			sourceTree = "<group>";
+		};
+		3296D0D621320B1B0068633C /* MapViewScreen */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = MapViewScreen;
+			sourceTree = "<group>";
+		};
 		578468CB31D6CE020C9579CA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3296D0D721320E5A0068633C /* CoreLocation.framework */,
 				51F514556AA31007260C331F /* Pods_EvaluationTask.framework */,
 			);
 			name = Frameworks;
@@ -310,7 +338,7 @@
 				327E4A4F212F5D7D00A9EF8A /* LaunchScreen.storyboard in Resources */,
 				327E4A4C212F5D7D00A9EF8A /* Assets.xcassets in Resources */,
 				3296D0C32131D8880068633C /* ConnectionStatus.storyboard in Resources */,
-				327E4A4A212F5D7B00A9EF8A /* Main.storyboard in Resources */,
+				327E4A4A212F5D7B00A9EF8A /* Card.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -374,7 +402,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				321BD90B2131D67200A16CAA /* NSError+Networking.swift in Sources */,
-				327E4A47212F5D7B00A9EF8A /* ViewController.swift in Sources */,
+				327E4A47212F5D7B00A9EF8A /* CardViewController.swift in Sources */,
 				3296D0C52131D8880068633C /* ConnectionStatus.swift in Sources */,
 				3296D0C72131D9000068633C /* CoreNetwork.swift in Sources */,
 				3296D0CC2131E95F0068633C /* HUDAnimationService.swift in Sources */,
@@ -412,12 +440,12 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		327E4A48212F5D7B00A9EF8A /* Main.storyboard */ = {
+		327E4A48212F5D7B00A9EF8A /* Card.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				327E4A49212F5D7B00A9EF8A /* Base */,
 			);
-			name = Main.storyboard;
+			name = Card.storyboard;
 			sourceTree = "<group>";
 		};
 		327E4A4D212F5D7D00A9EF8A /* LaunchScreen.storyboard */ = {
@@ -553,6 +581,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 57S73376BH;
 				INFOPLIST_FILE = EvaluationTask/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -572,6 +601,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 57S73376BH;
 				INFOPLIST_FILE = EvaluationTask/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

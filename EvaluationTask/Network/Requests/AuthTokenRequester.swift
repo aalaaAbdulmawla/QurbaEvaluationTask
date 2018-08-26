@@ -26,7 +26,7 @@ struct AuthTokenParam {
 }
 
 class AuthTokenRequester {
-    fileprivate let authTokenEndpoint = "/places/places/nearby"
+    fileprivate let authTokenEndpoint = "auth/login-guest/"
     fileprivate let networking: NetworkingInterface
     
     init(networking: NetworkingInterface) {

@@ -87,7 +87,7 @@ struct Address {
 struct PayloadObject {
     let name: LocalizationStrings
     let address: Address
-    let userFollowersCount: String
+    let userFollowersCount: Int
     let openingTimes: OpeningTimes
     let facilities: [LocalizationStrings]
     let hashtages: [String]
@@ -97,7 +97,7 @@ struct PayloadObject {
     init(rawDictionary: [String: AnyObject]) {
         name = LocalizationStrings(rawDictionary: rawDictionary[PayloadObjectKeys.Name.rawValue] as? [String: AnyObject] ?? [:])
         address = Address(rawDictionary: rawDictionary[PayloadObjectKeys.Address.rawValue] as? [String: AnyObject] ?? [:])
-        userFollowersCount = rawDictionary[PayloadObjectKeys.UserFollowersCount.rawValue] as? String ?? ""
+        userFollowersCount = rawDictionary[PayloadObjectKeys.UserFollowersCount.rawValue] as? Int ?? 0
         openingTimes = OpeningTimes(rawDictionary: rawDictionary[PayloadObjectKeys.OpeningTimes.rawValue] as? [String: AnyObject] ?? [:])
         let rawFacilities = rawDictionary[PayloadObjectKeys.Facilities.rawValue] as? [AnyObject] ?? []
         let rawFacilitiesDictionaries = rawFacilities.map { $0 as? [String: AnyObject] ?? [:] }
@@ -121,8 +121,8 @@ struct NearbyPlacesResponse {
         if let rawError = rawDictionary[CommonResponseKeys.Error.rawValue] as? [String: AnyObject] {
             error = Error(rawDictionary: rawError)
         }
-        if let rawPayload = rawDictionary[CommonResponseKeys.Payload.rawValue] as? [AnyObject] {
-            payLoad = rawPayload.map { PayloadObject(rawDictionary: $0 as? [String: AnyObject] ?? [:])}
+        if let rawPayload = rawDictionary[CommonResponseKeys.Payload.rawValue] as? [[String : AnyObject]] {
+            payLoad = rawPayload.map { PayloadObject(rawDictionary: $0) }
         }
     }
 }

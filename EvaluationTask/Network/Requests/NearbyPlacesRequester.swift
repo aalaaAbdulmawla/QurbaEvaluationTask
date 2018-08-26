@@ -34,7 +34,7 @@ struct NearbyPlacesParam {
 }
 
 class NearbyPlacesRequester {
-    fileprivate let nearbyPlacesEndPoint = "/places/places/nearby?page=1"
+    fileprivate let nearbyPlacesEndPoint = "places/places/nearby?page=1"
     fileprivate let networking: NetworkingInterface
     
     init(networking: NetworkingInterface) {
