@@ -48,10 +48,11 @@
                         <rect key="frame" x="268" y="71" width="97" height="87"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="97" id="feN-PW-wvu"/>
+                            <constraint firstAttribute="height" constant="87" id="le2-uZ-Oaf"/>
                         </constraints>
                     </imageView>
                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Closed" translatesAutoresizingMaskIntoConstraints="NO" id="qYX-lo-8lb">
-                        <rect key="frame" x="16" y="110" width="15" height="15"/>
+                        <rect key="frame" x="16" y="110" width="15" height="12"/>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="kersengaarde  " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1iY-wc-tHk">
                         <rect key="frame" x="45" y="71" width="209" height="21"/>
@@ -132,7 +133,6 @@
                     <constraint firstItem="A2e-Uu-3pT" firstAttribute="leading" secondItem="S2X-28-I9i" secondAttribute="trailing" constant="8" symbolic="YES" id="4wC-zD-RcC"/>
                     <constraint firstItem="1iY-wc-tHk" firstAttribute="leading" secondItem="yln-Ns-Z3J" secondAttribute="trailing" constant="16" id="5UJ-GO-WZr"/>
                     <constraint firstItem="kXu-6c-y0h" firstAttribute="leading" secondItem="wRB-9e-vUh" secondAttribute="trailing" constant="8" symbolic="YES" id="5fX-pf-hHz"/>
-                    <constraint firstItem="qYX-lo-8lb" firstAttribute="centerY" secondItem="WVJ-eC-7EE" secondAttribute="centerY" id="94j-T4-Era"/>
                     <constraint firstItem="WVJ-eC-7EE" firstAttribute="top" secondItem="1iY-wc-tHk" secondAttribute="bottom" constant="15" id="AvB-lT-Hnn"/>
                     <constraint firstItem="wRB-9e-vUh" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="BRg-yl-JmM"/>
                     <constraint firstItem="kXu-6c-y0h" firstAttribute="leading" secondItem="IO3-hK-hgU" secondAttribute="leading" id="BUr-IC-iTD"/>
@@ -185,6 +185,7 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="availabilityImg" destination="qYX-lo-8lb" id="e4e-Bc-GWU"/>
                 <outlet property="placeAvalilability" destination="WVJ-eC-7EE" id="hmq-2q-n1I"/>
                 <outlet property="placeCategories" destination="IO3-hK-hgU" id="cQ3-Iv-iHU"/>
                 <outlet property="placeCoverImage" destination="oB9-rr-ux5" id="4NO-Ia-48B"/>

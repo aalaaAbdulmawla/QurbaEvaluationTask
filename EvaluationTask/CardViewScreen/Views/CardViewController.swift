@@ -54,6 +54,10 @@ extension CardViewController: UITableViewDelegate {
         tableView.deselectRow(at: indexPath, animated: true)
         delegate.didSelectRowAtndex(indexPath.row)
     }
+    
+    func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+        return UIView(frame: CGRect.zero)
+    }
 }
 
 extension CardViewController: CardViewControllerProtocol {

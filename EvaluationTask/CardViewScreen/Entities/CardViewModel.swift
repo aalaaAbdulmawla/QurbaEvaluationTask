@@ -64,15 +64,14 @@ fileprivate func getFacilitiesImages(facilities: [String]) -> [String] {
 
 fileprivate func isOpen(openingTimes: OpeningTimes) -> AvailableNow {
     let weekday = Calendar.current.component(.weekday, from: Date()) - 1
-    let hour = Calendar.current.component(.hour, from: Date()) + 2 //Uses GMT time
+    let hour = Calendar.current.component(.hour, from: Date()) //Uses GMT+2 (Egypt) time
     let minute = Calendar.current.component(.minute, from: Date())
     guard let openingDay = openingTimes.days[Days[weekday]], openingDay.isDayOpen else { return .Close }
     for shift in openingDay.shifts {
-        if !shift.isShiftOpen {
-            continue
-        }
-        if hour >= shift.opens.hour && minute >= shift.opens.minutes &&
-           hour <= shift.closes.hour && minute <= shift.closes.minutes {
+        if !shift.isShiftOpen { continue }
+        if hour >= shift.opens.hour && minute <= shift.closes.hour {
+            if (hour == shift.opens.hour && minute < shift.opens.minutes) { continue }
+            if (hour == shift.closes.hour && minute < shift.closes.minutes) { continue }
             return .Open
         }
     }
