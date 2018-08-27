@@ -9,50 +9,59 @@
 import UIKit
 import CoreLocation
 
-class CardViewController: UIViewController, CLLocationManagerDelegate {
+protocol CardViewControllerProtocol: class {
+    func reloadData()
+    func getTableView() -> UITableView
+}
+
+class CardViewController: UIViewController {
     
-    let locationManager:CLLocationManager = CLLocationManager()
+    @IBOutlet weak var nearbyPlacesTableView: UITableView!  {
+        didSet {
+            nearbyPlacesTableView.register(UINib.init(nibName: "CardViewCell", bundle: nil),
+                forCellReuseIdentifier: "CardViewCell")
+        }
+    }
+    
+    var delegate: CardViewPresenterProtocol = CardViewPresenter()
+    
     var flag = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        locationManager.delegate = self
-        locationManager.desiredAccuracy = kCLLocationAccuracyBest
-        locationManager.distanceFilter = kCLDistanceFilterNone
-        
-        
-        if (NSFoundationVersionNumber > NSFoundationVersionNumber_iOS_7_1) {
-            locationManager.requestWhenInUseAuthorization()
-        }
-        
-        locationManager.startMonitoringSignificantLocationChanges()
-        locationManager.startUpdatingLocation()
+        nearbyPlacesTableView.dataSource = self
+        delegate.seViewtDelegate(delegate: self as CardViewControllerProtocol)
+        delegate.viewDidLoad()
+    }
+}
+
+extension CardViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return delegate.getNumberOfRows()
     }
     
-    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        let location:CLLocation = locations[0] 
-        
-        if (location.horizontalAccuracy > 0) {
-            self.locationManager.stopUpdatingLocation()
-            
-            /* do something with coordinates */
-            print(location.coordinate)
-            if (!flag) {
-                let param = NearbyPlacesParam(lat: 29.9187387/*location.coordinate.latitude*/, lng: 31.2505866/*location.coordinate.longitude*/)
-                
-                CoreNetwork.sharedInstance.requestAuthToken() { (authEntity) -> (Void) in
-                    CoreNetwork.sharedInstance.requestNearbyPlaces(authToken: authEntity.authTokenResponse.payload?.jwt ?? "", nearbyParam: param) { (nearbyPlaces) -> (Void) in
-                        print(nearbyPlaces)
-                    }
-                }
-                flag = true
-            }
-        }
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        return delegate.getCellForRowAtIndex(indexPath)
+    }
+}
+
+extension CardViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return UITableViewAutomaticDimension
     }
     
-    private func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
-        print(error)
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        delegate.didSelectRowAtndex(indexPath.row)
+    }
+}
+
+extension CardViewController: CardViewControllerProtocol {
+    func reloadData() {
+        nearbyPlacesTableView.reloadData()
     }
     
-    
+    func getTableView() -> UITableView {
+        return nearbyPlacesTableView
+    }
 }

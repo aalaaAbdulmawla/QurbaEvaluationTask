@@ -31,7 +31,7 @@ extension UIImageView {
     
     fileprivate func configureLoadingIndicator() -> UIActivityIndicatorView {
         let activityIndicator = UIActivityIndicatorView(activityIndicatorStyle: UIActivityIndicatorViewStyle.gray)
-        activityIndicator.center = self.center
+        activityIndicator.center = CGPoint(x: self.bounds.midX , y: self.bounds.midY)
         self.addSubview(activityIndicator)
         activityIndicator.startAnimating()
         

@@ -18,7 +18,7 @@ class AlamofireAdaptor: NetworkingInterface {
     let maxValidStatusCode = 403
     let AlamofireBugErrorCode = 3840
     let validContentTypes = ["application/json"]
-    let backgroundQueue = DispatchQueue(label: "com.mumzworld.requests", qos: .userInteractive)
+    let backgroundQueue = DispatchQueue(label: "com.task.requests", qos: .userInteractive)
     
     init(baseURL: String , headers: [String: String]? = nil) {
         self.requestBaseURL = baseURL
