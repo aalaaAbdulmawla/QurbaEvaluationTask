@@ -57,24 +57,8 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "EvaluationTask/CardViewScreen/Entities/CardViewModel.swift"
-            timestampString = "557087402.201726"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "36"
-            endingLineNumber = "36"
-            landmarkName = "init(nearbyPlaceEntity:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "EvaluationTask/CardViewScreen/Views/Cells/CardViewCell.swift"
-            timestampString = "557087402.201821"
+            timestampString = "557088345.657516"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "41"
@@ -89,13 +73,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "EvaluationTask/CardViewScreen/Entities/CardViewModel.swift"
-            timestampString = "557087402.2018861"
+            filePath = "EvaluationTask/CardViewScreen/Views/Cells/CardViewCell.swift"
+            timestampString = "557088345.657652"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "37"
-            endingLineNumber = "37"
-            landmarkName = "init(nearbyPlaceEntity:)"
+            startingLineNumber = "54"
+            endingLineNumber = "54"
+            landmarkName = "configureCellWith(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

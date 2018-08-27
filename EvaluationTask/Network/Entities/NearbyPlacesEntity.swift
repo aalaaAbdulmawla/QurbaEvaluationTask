@@ -101,9 +101,8 @@ struct PayloadObject {
         address = Address(rawDictionary: rawDictionary[PayloadObjectKeys.Address.rawValue] as? [String: AnyObject] ?? [:])
         userFollowersCount = rawDictionary[PayloadObjectKeys.UserFollowersCount.rawValue] as? Int ?? 0
         openingTimes = OpeningTimes(rawDictionary: rawDictionary[PayloadObjectKeys.OpeningTimes.rawValue] as? [String: AnyObject] ?? [:])
-        let rawFacilities = rawDictionary[PayloadObjectKeys.Facilities.rawValue] as? [AnyObject] ?? []
-        let rawFacilitiesDictionaries = rawFacilities.map { $0 as? [String: AnyObject] ?? [:] }
-        facilities = rawFacilitiesDictionaries.map { LocalizationStrings(rawDictionary: $0) }
+        let rawFacilities = rawDictionary[PayloadObjectKeys.Facilities.rawValue] as? [[String: AnyObject]] ?? [[:]]
+        facilities = rawFacilities.map { LocalizationStrings(rawDictionary: $0[PayloadObjectKeys.Name.rawValue] as? [String: AnyObject] ?? [:]) }
         let rawHashtags = rawDictionary[PayloadObjectKeys.Hashtags.rawValue] as? [[String : AnyObject]] ?? [[:]]
         hashtages = rawHashtags.map { ($0[PayloadObjectKeys.Name.rawValue] as? String) ?? "" }
         shortDescribtion = LocalizationStrings(rawDictionary: rawDictionary[PayloadObjectKeys.ShortDescription.rawValue] as? [String: AnyObject] ?? [:])
