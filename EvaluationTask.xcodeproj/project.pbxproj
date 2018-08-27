@@ -15,6 +15,10 @@
 		320DC9612133807100B17393 /* CardViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 320DC9602133807100B17393 /* CardViewPresenter.swift */; };
 		320DC9632134765600B17393 /* CardViewPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 320DC9622134765600B17393 /* CardViewPresenterProtocol.swift */; };
 		320DC9652134769700B17393 /* CardViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 320DC9642134769700B17393 /* CardViewControllerProtocol.swift */; };
+		320DC96821347F1500B17393 /* MapViewScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 320DC96721347F1500B17393 /* MapViewScreen.storyboard */; };
+		320DC96A21347F4400B17393 /* MapViewScreenViewControllerTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 320DC96921347F4400B17393 /* MapViewScreenViewControllerTableViewController.swift */; };
+		320DC96E2134811600B17393 /* MapViewScreenPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 320DC96D2134811600B17393 /* MapViewScreenPresenter.swift */; };
+		320DC9702134814000B17393 /* MapViewScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 320DC96F2134814000B17393 /* MapViewScreenViewModel.swift */; };
 		321BD8FD213183E900A16CAA /* AuthTokenEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 321BD8FC213183E900A16CAA /* AuthTokenEntity.swift */; };
 		321BD8FF21319CC800A16CAA /* NearbyPlacesEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 321BD8FE21319CC800A16CAA /* NearbyPlacesEntity.swift */; };
 		321BD9012131A03E00A16CAA /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 321BD9002131A03E00A16CAA /* Common.swift */; };
@@ -53,6 +57,10 @@
 		320DC9602133807100B17393 /* CardViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewPresenter.swift; sourceTree = "<group>"; };
 		320DC9622134765600B17393 /* CardViewPresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewPresenterProtocol.swift; sourceTree = "<group>"; };
 		320DC9642134769700B17393 /* CardViewControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewControllerProtocol.swift; sourceTree = "<group>"; };
+		320DC96721347F1500B17393 /* MapViewScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MapViewScreen.storyboard; sourceTree = "<group>"; };
+		320DC96921347F4400B17393 /* MapViewScreenViewControllerTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewScreenViewControllerTableViewController.swift; sourceTree = "<group>"; };
+		320DC96D2134811600B17393 /* MapViewScreenPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewScreenPresenter.swift; sourceTree = "<group>"; };
+		320DC96F2134814000B17393 /* MapViewScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewScreenViewModel.swift; sourceTree = "<group>"; };
 		321BD8FC213183E900A16CAA /* AuthTokenEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthTokenEntity.swift; sourceTree = "<group>"; };
 		321BD8FE21319CC800A16CAA /* NearbyPlacesEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearbyPlacesEntity.swift; sourceTree = "<group>"; };
 		321BD9002131A03E00A16CAA /* Common.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
@@ -133,6 +141,31 @@
 			children = (
 				320DC9602133807100B17393 /* CardViewPresenter.swift */,
 				320DC9622134765600B17393 /* CardViewPresenterProtocol.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		320DC96621347ECE00B17393 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				320DC96721347F1500B17393 /* MapViewScreen.storyboard */,
+				320DC96921347F4400B17393 /* MapViewScreenViewControllerTableViewController.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		320DC96B213480DE00B17393 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				320DC96F2134814000B17393 /* MapViewScreenViewModel.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		320DC96C213480EB00B17393 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				320DC96D2134811600B17393 /* MapViewScreenPresenter.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -260,6 +293,9 @@
 		3296D0D621320B1B0068633C /* MapViewScreen */ = {
 			isa = PBXGroup;
 			children = (
+				320DC96C213480EB00B17393 /* Presenter */,
+				320DC96B213480DE00B17393 /* Entities */,
+				320DC96621347ECE00B17393 /* Views */,
 			);
 			path = MapViewScreen;
 			sourceTree = "<group>";
@@ -294,6 +330,7 @@
 				327E4A3E212F5D7B00A9EF8A /* Frameworks */,
 				327E4A3F212F5D7B00A9EF8A /* Resources */,
 				17B8314ECA36EBA4B2771FC5 /* [CP] Embed Pods Frameworks */,
+				A9D8E53D0C621889E9FF258B /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -369,6 +406,7 @@
 				327E4A4C212F5D7D00A9EF8A /* Assets.xcassets in Resources */,
 				327E4A4A212F5D7B00A9EF8A /* Card.storyboard in Resources */,
 				320DC9572133374500B17393 /* CardViewCell.xib in Resources */,
+				320DC96821347F1500B17393 /* MapViewScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -391,15 +429,11 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-EvaluationTask/Pods-EvaluationTask-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
-				"${BUILT_PRODUCTS_DIR}/Material/Material.framework",
-				"${BUILT_PRODUCTS_DIR}/Motion/Motion.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Material.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Motion.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -424,6 +458,30 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		A9D8E53D0C621889E9FF258B /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-EvaluationTask/Pods-EvaluationTask-resources.sh",
+				"${PODS_ROOT}/GoogleMaps/Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle",
+				"${PODS_ROOT}/GooglePlaces/Frameworks/GooglePlaces.framework/Resources/GooglePlaces.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleMaps.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GooglePlaces.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EvaluationTask/Pods-EvaluationTask-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -439,8 +497,10 @@
 				320DC95E21336CC600B17393 /* ImagesDownloader.swift in Sources */,
 				3296D0D12131F0320068633C /* AuthTokenRequester.swift in Sources */,
 				3296D0C92131D90D0068633C /* HostService.swift in Sources */,
+				320DC96E2134811600B17393 /* MapViewScreenPresenter.swift in Sources */,
 				320DC95A2133378C00B17393 /* CardViewModel.swift in Sources */,
 				321BD9092131D3EF00A16CAA /* AlomofireAdaptor.swift in Sources */,
+				320DC96A21347F4400B17393 /* MapViewScreenViewControllerTableViewController.swift in Sources */,
 				320DC9652134769700B17393 /* CardViewControllerProtocol.swift in Sources */,
 				3296D0D32131F0490068633C /* NearbyPlacesRequester.swift in Sources */,
 				321BD8FF21319CC800A16CAA /* NearbyPlacesEntity.swift in Sources */,
@@ -449,6 +509,7 @@
 				321BD9012131A03E00A16CAA /* Common.swift in Sources */,
 				320DC9632134765600B17393 /* CardViewPresenterProtocol.swift in Sources */,
 				321BD8FD213183E900A16CAA /* AuthTokenEntity.swift in Sources */,
+				320DC9702134814000B17393 /* MapViewScreenViewModel.swift in Sources */,
 				321BD9032131CE7000A16CAA /* NearbyPlacesEntityKeys.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -10,7 +10,7 @@ import Foundation
 
 enum AvailableNow: String {
     case Open = "Open"
-    case Close = "Close"
+    case Close = "Closed"
 }
 
 struct CardViewModel {

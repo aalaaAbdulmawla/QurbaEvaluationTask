@@ -14,6 +14,5 @@ protocol CardViewPresenterProtocol: class {
     func getNumberOfRows() -> Int
     func getCellForRowAtIndex(_ index: IndexPath) -> UITableViewCell
     func didSelectRowAtndex(_ index: Int)
-    func seViewtDelegate(delegate: CardViewControllerProtocol)
 }
 

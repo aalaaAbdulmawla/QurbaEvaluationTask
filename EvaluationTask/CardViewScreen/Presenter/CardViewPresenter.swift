@@ -16,6 +16,10 @@ class CardViewPresenter: NSObject {
     fileprivate var cellName =  "CardViewCell"
     private var nearbyLoactions: [CardViewModel]?
     weak fileprivate var viewDelegate: CardViewControllerProtocol?
+    
+    init(view: CardViewControllerProtocol) {
+        self.viewDelegate = view
+    }
 }
 
 extension CardViewPresenter: CLLocationManagerDelegate {
@@ -50,10 +54,6 @@ extension CardViewPresenter: CLLocationManagerDelegate {
 }
 
 extension CardViewPresenter: CardViewPresenterProtocol {
-    func seViewtDelegate(delegate: CardViewControllerProtocol) {
-        self.viewDelegate = delegate
-    }
-    
     func getNumberOfRows() -> Int {
         return nearbyLoactions?.count ?? 0
     }

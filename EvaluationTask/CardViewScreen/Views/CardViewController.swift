@@ -10,7 +10,7 @@ import UIKit
 import CoreLocation
 
 class CardViewController: UIViewController {
-    fileprivate var delegate: CardViewPresenterProtocol = CardViewPresenter()
+    fileprivate var delegate: CardViewPresenterProtocol?
     fileprivate var cellName =  "CardViewCell"
     
     @IBOutlet weak var activitiyIndicator: UIActivityIndicatorView!
@@ -25,18 +25,18 @@ class CardViewController: UIViewController {
         super.viewDidLoad()
         nearbyPlacesTableView.dataSource = self
         activitiyIndicator?.hidesWhenStopped = true
-        delegate.seViewtDelegate(delegate: self as CardViewControllerProtocol)
-        delegate.viewDidLoad()
+        delegate = CardViewPresenter(view: self)
+        delegate?.viewDidLoad()
     }
 }
 
 extension CardViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return delegate.getNumberOfRows()
+        return delegate?.getNumberOfRows() ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return delegate.getCellForRowAtIndex(indexPath)
+        return delegate?.getCellForRowAtIndex(indexPath) ?? UITableViewCell()
     }
 }
 
@@ -47,7 +47,7 @@ extension CardViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        delegate.didSelectRowAtndex(indexPath.row)
+        delegate?.didSelectRowAtndex(indexPath.row)
     }
     
     func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {

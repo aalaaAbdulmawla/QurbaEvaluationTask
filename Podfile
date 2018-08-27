@@ -6,5 +6,6 @@
 target 'EvaluationTask' do
     pod 'AlamofireImage', '~> 3.3'
     pod 'Alamofire', '~> 4.7'
-    pod 'Material', '~> 2.3'
+    pod 'GoogleMaps'
+    pod 'GooglePlaces'
 end
