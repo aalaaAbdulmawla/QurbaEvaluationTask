@@ -59,7 +59,9 @@ class CardViewCell: UITableViewCell {
     
     func setPlaceAvailabilityLabel(availableNow: AvailableNow) {
         placeAvalilability.text = availableNow.rawValue
-        placeAvalilability.textColor = (availableNow == .Close) ? UIColor(red: 158.0/255.0, green: 158.0/255.0, blue: 158.0/255.0, alpha: 1.0) : UIColor(red: 44.0/255.0, green: 181.0/255.0, blue: 126.0/255.0, alpha: 1.0)
+        placeAvalilability.textColor = (availableNow == .Close) ?
+            UIColor(red: 158.0/255.0, green: 158.0/255.0, blue: 158.0/255.0, alpha: 1.0) :
+            UIColor(red: 44.0/255.0, green: 181.0/255.0, blue: 126.0/255.0, alpha: 1.0)
         availabilityImg.image = UIImage(named: (availableNow == .Close) ? "Closed" : "Open")
     }
     

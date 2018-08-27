@@ -13,6 +13,8 @@
 		320DC95A2133378C00B17393 /* CardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 320DC9592133378C00B17393 /* CardViewModel.swift */; };
 		320DC95E21336CC600B17393 /* ImagesDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 320DC95D21336CC600B17393 /* ImagesDownloader.swift */; };
 		320DC9612133807100B17393 /* CardViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 320DC9602133807100B17393 /* CardViewPresenter.swift */; };
+		320DC9632134765600B17393 /* CardViewPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 320DC9622134765600B17393 /* CardViewPresenterProtocol.swift */; };
+		320DC9652134769700B17393 /* CardViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 320DC9642134769700B17393 /* CardViewControllerProtocol.swift */; };
 		321BD8FD213183E900A16CAA /* AuthTokenEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 321BD8FC213183E900A16CAA /* AuthTokenEntity.swift */; };
 		321BD8FF21319CC800A16CAA /* NearbyPlacesEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 321BD8FE21319CC800A16CAA /* NearbyPlacesEntity.swift */; };
 		321BD9012131A03E00A16CAA /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 321BD9002131A03E00A16CAA /* Common.swift */; };
@@ -49,6 +51,8 @@
 		320DC9592133378C00B17393 /* CardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewModel.swift; sourceTree = "<group>"; };
 		320DC95D21336CC600B17393 /* ImagesDownloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesDownloader.swift; sourceTree = "<group>"; };
 		320DC9602133807100B17393 /* CardViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewPresenter.swift; sourceTree = "<group>"; };
+		320DC9622134765600B17393 /* CardViewPresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewPresenterProtocol.swift; sourceTree = "<group>"; };
+		320DC9642134769700B17393 /* CardViewControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewControllerProtocol.swift; sourceTree = "<group>"; };
 		321BD8FC213183E900A16CAA /* AuthTokenEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthTokenEntity.swift; sourceTree = "<group>"; };
 		321BD8FE21319CC800A16CAA /* NearbyPlacesEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearbyPlacesEntity.swift; sourceTree = "<group>"; };
 		321BD9002131A03E00A16CAA /* Common.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
@@ -102,6 +106,7 @@
 				320DC953213336DC00B17393 /* Cells */,
 				327E4A46212F5D7B00A9EF8A /* CardViewController.swift */,
 				327E4A48212F5D7B00A9EF8A /* Card.storyboard */,
+				320DC9642134769700B17393 /* CardViewControllerProtocol.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -127,6 +132,7 @@
 			isa = PBXGroup;
 			children = (
 				320DC9602133807100B17393 /* CardViewPresenter.swift */,
+				320DC9622134765600B17393 /* CardViewPresenterProtocol.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -435,11 +441,13 @@
 				3296D0C92131D90D0068633C /* HostService.swift in Sources */,
 				320DC95A2133378C00B17393 /* CardViewModel.swift in Sources */,
 				321BD9092131D3EF00A16CAA /* AlomofireAdaptor.swift in Sources */,
+				320DC9652134769700B17393 /* CardViewControllerProtocol.swift in Sources */,
 				3296D0D32131F0490068633C /* NearbyPlacesRequester.swift in Sources */,
 				321BD8FF21319CC800A16CAA /* NearbyPlacesEntity.swift in Sources */,
 				320DC9562133374500B17393 /* CardViewCell.swift in Sources */,
 				321BD9072131D3DC00A16CAA /* NetworkInterface.swift in Sources */,
 				321BD9012131A03E00A16CAA /* Common.swift in Sources */,
+				320DC9632134765600B17393 /* CardViewPresenterProtocol.swift in Sources */,
 				321BD8FD213183E900A16CAA /* AuthTokenEntity.swift in Sources */,
 				321BD9032131CE7000A16CAA /* NearbyPlacesEntityKeys.swift in Sources */,
 			);

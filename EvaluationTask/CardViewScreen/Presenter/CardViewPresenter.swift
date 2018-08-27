@@ -10,17 +10,10 @@ import Foundation
 import UIKit
 import CoreLocation
 
-protocol CardViewPresenterProtocol: class {
-    func viewDidLoad()
-    func getNumberOfRows() -> Int
-    func getCellForRowAtIndex(_ index: IndexPath) -> UITableViewCell
-    func didSelectRowAtndex(_ index: Int)
-    func seViewtDelegate(delegate: CardViewControllerProtocol)
-}
-
 class CardViewPresenter: NSObject {
     fileprivate let locationManager:CLLocationManager = CLLocationManager()
-    fileprivate var flag = false
+    fileprivate var firstTimeLoad = false
+    fileprivate var cellName =  "CardViewCell"
     private var nearbyLoactions: [CardViewModel]?
     weak fileprivate var viewDelegate: CardViewControllerProtocol?
 }
@@ -29,12 +22,11 @@ extension CardViewPresenter: CLLocationManagerDelegate {
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         let location:CLLocation = locations[0]
-        
         if (location.horizontalAccuracy > 0) {
             self.locationManager.stopUpdatingLocation()
             print(location.coordinate)
-            if (!flag) {
-                flag = true
+            if (!firstTimeLoad) {
+                firstTimeLoad = true
                 getNearbyLocations()
             }
         }
@@ -46,9 +38,10 @@ extension CardViewPresenter: CLLocationManagerDelegate {
     
     private func getNearbyLocations() {
         let param = NearbyPlacesParam(lat: 31.2505866/*location.coordinate.latitude*/, lng: 29.9187387/*location.coordinate.longitude*/)
+        viewDelegate?.startActivitityIndicator()
         CoreNetwork.sharedInstance.requestAuthToken() { (authEntity) -> (Void) in
             CoreNetwork.sharedInstance.requestNearbyPlaces(authToken: authEntity.authTokenResponse.payload?.jwt ?? "", nearbyParam: param) { (places) -> (Void) in
-                print(places)
+                self.viewDelegate?.stopActitvityIndicator()
                 self.nearbyLoactions = places.nearbyPlacesResponse.payLoad?.map { CardViewModel(nearbyPlaceEntity: $0 )}
                 self.viewDelegate?.reloadData()
             }
@@ -66,10 +59,10 @@ extension CardViewPresenter: CardViewPresenterProtocol {
     }
     
     func getCellForRowAtIndex(_ indexPath: IndexPath) -> UITableViewCell {
-        let cell = viewDelegate?.getTableView().dequeueReusableCell(withIdentifier: "CardViewCell",
-            for: indexPath) as! CardViewCell
-        //let viewModel = nearbyLoactions?[indexPath.row] else { return UITableViewCell() }
-        cell.configureCellWith(nearbyLoactions![indexPath.row])
+        guard let viewModel = nearbyLoactions?[indexPath.row],
+            let cell = viewDelegate?.getTableView().dequeueReusableCell(withIdentifier: cellName,
+            for: indexPath) as? CardViewCell else { return UITableViewCell() }
+        cell.configureCellWith(viewModel)
         cell.selectionStyle = .default
         return cell
     }
@@ -87,7 +80,7 @@ extension CardViewPresenter: CardViewPresenterProtocol {
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
         locationManager.distanceFilter = kCLDistanceFilterNone
         if (NSFoundationVersionNumber > NSFoundationVersionNumber_iOS_7_1) {
-        locationManager.requestWhenInUseAuthorization()
+            locationManager.requestWhenInUseAuthorization()
         }
         locationManager.startMonitoringSignificantLocationChanges()
         locationManager.startUpdatingLocation()

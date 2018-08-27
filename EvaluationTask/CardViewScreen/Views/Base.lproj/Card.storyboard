@@ -26,17 +26,27 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="QF7-Yh-35N"/>
                                 </connections>
                             </tableView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="0kQ-y3-54K">
+                                <rect key="frame" x="167" y="323" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="9w4-EM-dU8"/>
+                                    <constraint firstAttribute="height" constant="40" id="UFn-uS-pdF"/>
+                                </constraints>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="0kQ-y3-54K" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="1uy-Kq-SRf"/>
                             <constraint firstItem="AXc-Vp-okY" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="9by-hh-G1S"/>
                             <constraint firstItem="AXc-Vp-okY" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="LPR-ar-n8G"/>
                             <constraint firstAttribute="trailing" secondItem="AXc-Vp-okY" secondAttribute="trailing" id="URh-ha-9x2"/>
+                            <constraint firstItem="0kQ-y3-54K" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="qKg-4a-bP1"/>
                             <constraint firstItem="AXc-Vp-okY" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="sSL-HM-7G6"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="activitiyIndicator" destination="0kQ-y3-54K" id="VkZ-i0-lA2"/>
                         <outlet property="nearbyPlacesTableView" destination="AXc-Vp-okY" id="Hho-Lq-uLd"/>
                     </connections>
                 </viewController>

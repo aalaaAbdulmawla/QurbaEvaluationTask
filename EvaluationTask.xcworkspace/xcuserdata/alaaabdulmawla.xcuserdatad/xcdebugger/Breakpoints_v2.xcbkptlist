@@ -57,56 +57,8 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "EvaluationTask/CardViewScreen/Presenter/CardViewPresenter.swift"
-            timestampString = "557085900.689059"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "69"
-            endingLineNumber = "69"
-            landmarkName = "getCellForRowAtIndex(_:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "EvaluationTask.CardViewPresenter.getCellForRowAtIndex(Foundation.IndexPath) -&gt; __ObjC.UITableViewCell"
-                  moduleName = "EvaluationTask"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/alaaabdulmawla/Desktop/EvaluationTask/EvaluationTask/CardViewScreen/Presenter/CardViewPresenter.swift"
-                  timestampString = "557084668.6536649"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "69"
-                  endingLineNumber = "69"
-                  offsetFromSymbolStart = "32">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "EvaluationTask.CardViewPresenter.getCellForRowAtIndex(Foundation.IndexPath) -&gt; __ObjC.UITableViewCell"
-                  moduleName = "EvaluationTask"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/alaaabdulmawla/Desktop/EvaluationTask/EvaluationTask/CardViewScreen/Presenter/CardViewPresenter.swift"
-                  timestampString = "557084668.658235"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "69"
-                  endingLineNumber = "69"
-                  offsetFromSymbolStart = "792">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "EvaluationTask/CardViewScreen/Entities/CardViewModel.swift"
-            timestampString = "557085900.689147"
+            timestampString = "557087402.201726"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "36"
@@ -122,13 +74,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "EvaluationTask/CardViewScreen/Views/Cells/CardViewCell.swift"
-            timestampString = "557085900.689218"
+            timestampString = "557087402.201821"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "41"
             endingLineNumber = "41"
-            landmarkName = "CardViewCell"
-            landmarkType = "3">
+            landmarkName = "configureCellWith(_:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -138,7 +90,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "EvaluationTask/CardViewScreen/Entities/CardViewModel.swift"
-            timestampString = "557085900.6892819"
+            timestampString = "557087402.2018861"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "37"

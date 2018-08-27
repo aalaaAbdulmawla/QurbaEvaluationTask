@@ -9,27 +9,22 @@
 import UIKit
 import CoreLocation
 
-protocol CardViewControllerProtocol: class {
-    func reloadData()
-    func getTableView() -> UITableView
-}
-
 class CardViewController: UIViewController {
+    fileprivate var delegate: CardViewPresenterProtocol = CardViewPresenter()
+    fileprivate var cellName =  "CardViewCell"
     
+    @IBOutlet weak var activitiyIndicator: UIActivityIndicatorView!
     @IBOutlet weak var nearbyPlacesTableView: UITableView!  {
         didSet {
-            nearbyPlacesTableView.register(UINib.init(nibName: "CardViewCell", bundle: nil),
-                forCellReuseIdentifier: "CardViewCell")
+            nearbyPlacesTableView.register(UINib.init(nibName: cellName, bundle: nil),
+                forCellReuseIdentifier: cellName)
         }
     }
-    
-    var delegate: CardViewPresenterProtocol = CardViewPresenter()
-    
-    var flag = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
         nearbyPlacesTableView.dataSource = self
+        activitiyIndicator?.hidesWhenStopped = true
         delegate.seViewtDelegate(delegate: self as CardViewControllerProtocol)
         delegate.viewDidLoad()
     }
@@ -61,6 +56,14 @@ extension CardViewController: UITableViewDelegate {
 }
 
 extension CardViewController: CardViewControllerProtocol {
+    func startActivitityIndicator() {
+        activitiyIndicator?.startAnimating()
+    }
+    
+    func stopActitvityIndicator() {
+        activitiyIndicator?.stopAnimating()
+    }
+    
     func reloadData() {
         nearbyPlacesTableView.reloadData()
     }
