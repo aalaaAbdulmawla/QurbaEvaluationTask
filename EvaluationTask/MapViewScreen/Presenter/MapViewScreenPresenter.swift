@@ -24,7 +24,7 @@ class MapViewScreenPresenter {
 
 extension MapViewScreenPresenter: MapViewScreenPresenterProtocol {
     func viewDidLoad() {
-        let camera = GMSCameraPosition.camera(withLatitude: 31.2505866/*viewModel.userLocation.lat*/, longitude: 29.9187387/*viewModel.userLocation.lng*/, zoom: 12.5)
+        let camera = GMSCameraPosition.camera(withLatitude: viewModel.userLocation.lat, longitude: viewModel.userLocation.lng, zoom: 12.5)
         mapView = GMSMapView.map(withFrame: CGRect.zero, camera: camera)
         setMarkers()
         viewDelegate?.setView(mapView: mapView)

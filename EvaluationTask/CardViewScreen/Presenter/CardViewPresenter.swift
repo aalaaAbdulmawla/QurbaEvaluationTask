@@ -40,7 +40,8 @@ extension CardViewPresenter: CLLocationManagerDelegate {
     }
     
     private func getNearbyLocations() {
-        let param = NearbyPlacesParam(lat: 31.2505866/*location.coordinate.latitude*/, lng: 29.9187387/*location.coordinate.longitude*/)
+        guard let userLocation = userLocation else { return }
+        let param = NearbyPlacesParam(lat: userLocation.lat, lng: userLocation.lng)
         viewDelegate?.startActivitityIndicator()
         CoreNetwork.sharedInstance.requestAuthToken() { (authEntity) -> (Void) in
             CoreNetwork.sharedInstance.requestNearbyPlaces(authToken: authEntity.authTokenResponse.payload?.jwt ?? "", nearbyParam: param) { (places) -> (Void) in

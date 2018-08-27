@@ -240,8 +240,8 @@
 		327E4A43212F5D7B00A9EF8A /* EvaluationTask */ = {
 			isa = PBXGroup;
 			children = (
-				3296D0D621320B1B0068633C /* MapViewScreen */,
 				3296D0D521320AF90068633C /* CardViewScreen */,
+				3296D0D621320B1B0068633C /* MapViewScreen */,
 				3296D0D421320AE90068633C /* UserLocation */,
 				3296D0CA2131E9050068633C /* Utiles */,
 				321BD8FA213182C500A16CAA /* Network */,
