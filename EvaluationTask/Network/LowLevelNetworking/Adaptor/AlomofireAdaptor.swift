@@ -26,7 +26,6 @@ class AlamofireAdaptor: NetworkingInterface {
     }
 
     func request(_ specs: RequestSpecs, completionBlock: @escaping NetworkingCompletionBlock) {
-        if !ConnectionObserver.sharedInstance.checkConnection(RequestData(specs: specs, completion: completionBlock, networking: self)) { return }
         let url = requestBaseURL + specs.URLString
         let encoding = convertRequestEnconding(specs.encoding)
         let request = Alamofire.request(url, method: convertRequestMethodToAlamofireMethod(specs.method), parameters: specs.parameters, encoding: encoding, headers: requestHeaders)

@@ -13,10 +13,7 @@ extension NSError {
         guard let unwrappedData = data else { return self }
         do {
             let serializedData = try JSONSerialization.jsonObject(with: unwrappedData, options: .allowFragments)
-            var userInfoDict = serializedData as? [AnyHashable: Any]
-            if userInfoDict?["detail"] == nil {
-                userInfoDict?["detail"] = ConnectionObserver.sharedInstance.isInternetConnection() ? "" : "Connection Lost"
-            }
+            let userInfoDict = serializedData as? [AnyHashable: Any]
             return NSError(domain: domain, code: code, userInfo: userInfoDict as? [String : Any])
         } catch {
             return self

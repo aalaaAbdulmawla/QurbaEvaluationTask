@@ -58,11 +58,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "EvaluationTask/Network/Entities/NearbyPlacesEntity.swift"
-            timestampString = "557000043.561096"
+            timestampString = "557022123.382247"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "124"
-            endingLineNumber = "124"
+            startingLineNumber = "130"
+            endingLineNumber = "130"
             landmarkName = "init(rawDictionary:)"
             landmarkType = "7">
          </BreakpointContent>

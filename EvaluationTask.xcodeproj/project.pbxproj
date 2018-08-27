@@ -25,9 +25,6 @@
 		327E4A4C212F5D7D00A9EF8A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 327E4A4B212F5D7D00A9EF8A /* Assets.xcassets */; };
 		327E4A4F212F5D7D00A9EF8A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 327E4A4D212F5D7D00A9EF8A /* LaunchScreen.storyboard */; };
 		327E4A5A212F5D7E00A9EF8A /* EvaluationTaskTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 327E4A59212F5D7E00A9EF8A /* EvaluationTaskTests.swift */; };
-		3296D0C32131D8880068633C /* ConnectionStatus.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3296D0C02131D8870068633C /* ConnectionStatus.storyboard */; };
-		3296D0C42131D8880068633C /* ConnectionObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3296D0C12131D8870068633C /* ConnectionObserver.swift */; };
-		3296D0C52131D8880068633C /* ConnectionStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3296D0C22131D8870068633C /* ConnectionStatus.swift */; };
 		3296D0C72131D9000068633C /* CoreNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3296D0C62131D9000068633C /* CoreNetwork.swift */; };
 		3296D0C92131D90D0068633C /* HostService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3296D0C82131D90D0068633C /* HostService.swift */; };
 		3296D0CC2131E95F0068633C /* HUDAnimationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3296D0CB2131E95F0068633C /* HUDAnimationService.swift */; };
@@ -69,9 +66,6 @@
 		327E4A55212F5D7E00A9EF8A /* EvaluationTaskTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EvaluationTaskTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		327E4A59212F5D7E00A9EF8A /* EvaluationTaskTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EvaluationTaskTests.swift; sourceTree = "<group>"; };
 		327E4A5B212F5D7E00A9EF8A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3296D0C02131D8870068633C /* ConnectionStatus.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ConnectionStatus.storyboard; sourceTree = "<group>"; };
-		3296D0C12131D8870068633C /* ConnectionObserver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectionObserver.swift; sourceTree = "<group>"; };
-		3296D0C22131D8870068633C /* ConnectionStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectionStatus.swift; sourceTree = "<group>"; };
 		3296D0C62131D9000068633C /* CoreNetwork.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreNetwork.swift; sourceTree = "<group>"; };
 		3296D0C82131D90D0068633C /* HostService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HostService.swift; sourceTree = "<group>"; };
 		3296D0CB2131E95F0068633C /* HUDAnimationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HUDAnimationService.swift; sourceTree = "<group>"; };
@@ -135,7 +129,6 @@
 			isa = PBXGroup;
 			children = (
 				3296D0CF2131F0140068633C /* Requests */,
-				321BD90C2131D73B00A16CAA /* Reachability */,
 				321BD9042131D30C00A16CAA /* LowLevelNetworking */,
 				321BD8FB2131830300A16CAA /* Entities */,
 				321BD90A2131D67200A16CAA /* NSError+Networking.swift */,
@@ -171,16 +164,6 @@
 				321BD9082131D3EF00A16CAA /* AlomofireAdaptor.swift */,
 			);
 			path = Adaptor;
-			sourceTree = "<group>";
-		};
-		321BD90C2131D73B00A16CAA /* Reachability */ = {
-			isa = PBXGroup;
-			children = (
-				3296D0C12131D8870068633C /* ConnectionObserver.swift */,
-				3296D0C02131D8870068633C /* ConnectionStatus.storyboard */,
-				3296D0C22131D8870068633C /* ConnectionStatus.swift */,
-			);
-			path = Reachability;
 			sourceTree = "<group>";
 		};
 		327E4A38212F5D7B00A9EF8A = {
@@ -373,7 +356,6 @@
 			files = (
 				327E4A4F212F5D7D00A9EF8A /* LaunchScreen.storyboard in Resources */,
 				327E4A4C212F5D7D00A9EF8A /* Assets.xcassets in Resources */,
-				3296D0C32131D8880068633C /* ConnectionStatus.storyboard in Resources */,
 				327E4A4A212F5D7B00A9EF8A /* Card.storyboard in Resources */,
 				320DC9572133374500B17393 /* CardViewCell.xib in Resources */,
 			);
@@ -440,14 +422,12 @@
 			files = (
 				321BD90B2131D67200A16CAA /* NSError+Networking.swift in Sources */,
 				327E4A47212F5D7B00A9EF8A /* CardViewController.swift in Sources */,
-				3296D0C52131D8880068633C /* ConnectionStatus.swift in Sources */,
 				3296D0C72131D9000068633C /* CoreNetwork.swift in Sources */,
 				3296D0CC2131E95F0068633C /* HUDAnimationService.swift in Sources */,
 				327E4A45212F5D7B00A9EF8A /* AppDelegate.swift in Sources */,
 				320DC95E21336CC600B17393 /* ImagesDownloader.swift in Sources */,
 				3296D0D12131F0320068633C /* AuthTokenRequester.swift in Sources */,
 				3296D0C92131D90D0068633C /* HostService.swift in Sources */,
-				3296D0C42131D8880068633C /* ConnectionObserver.swift in Sources */,
 				320DC95A2133378C00B17393 /* CardViewModel.swift in Sources */,
 				321BD9092131D3EF00A16CAA /* AlomofireAdaptor.swift in Sources */,
 				3296D0D32131F0490068633C /* NearbyPlacesRequester.swift in Sources */,
