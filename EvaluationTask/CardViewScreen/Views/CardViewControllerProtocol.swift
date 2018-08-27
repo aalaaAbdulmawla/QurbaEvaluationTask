@@ -14,4 +14,5 @@ protocol CardViewControllerProtocol: class {
     func getTableView() -> UITableView
     func startActivitityIndicator()
     func stopActitvityIndicator()
+    func getNavigationController() -> UINavigationController?
 }

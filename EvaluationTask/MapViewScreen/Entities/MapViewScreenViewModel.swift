@@ -8,7 +8,14 @@
 
 import Foundation
 
-struct MapViewScreenViewMode {
+struct MapViewScreenViewModel {
     let userLocation: Location
     let nearbyPlaces: [CardViewModel]
+    var selectedIndex: Int
+    
+    init(userLocation: Location, nearbyPlaces: [CardViewModel], selectedIndex: Int) {
+        self.userLocation = userLocation
+        self.nearbyPlaces = nearbyPlaces
+        self.selectedIndex = selectedIndex
+    }
 }

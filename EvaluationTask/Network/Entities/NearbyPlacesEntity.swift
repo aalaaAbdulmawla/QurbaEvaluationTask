@@ -9,17 +9,19 @@
 import Foundation
 
 struct Location {
-    let type: String
     var lat: Double = 0.0
     var lng: Double = 0.0
     
-    init(rawDictionary: [String: AnyObject]) {
-        type = rawDictionary[LocationsKeys.LocationType.rawValue] as? String ?? ""
-        let rawCoordinates = rawDictionary[LocationsKeys.Coordinates.rawValue] as? [Double] ?? []
-        if rawCoordinates.count == 2 {
-            lat = rawCoordinates[0]
-            lat = rawCoordinates[1]
+    init(rawArray: [Double]) {
+        if rawArray.count == 2 {
+            lng = rawArray[0]
+            lat = rawArray[1]
         }
+    }
+    
+    init(lat: Double, lng: Double) {
+        self.lat = lat
+        self.lng = lng
     }
 }
 
@@ -95,6 +97,7 @@ struct PayloadObject {
     let profileImg: String
     let coverImg: String
     let categories: [LocalizationStrings]
+    let location: Location
     
     init(rawDictionary: [String: AnyObject]) {
         name = LocalizationStrings(rawDictionary: rawDictionary[PayloadObjectKeys.Name.rawValue] as? [String: AnyObject] ?? [:])
@@ -111,6 +114,8 @@ struct PayloadObject {
         let rawCategories = rawDictionary[PayloadObjectKeys.Categories.rawValue] as? [[String: AnyObject]] ?? [[:]]
         let rawCategoriesNames = rawCategories.map { $0[PayloadObjectKeys.Name.rawValue] as? [String: AnyObject] ?? [:]}
         categories = rawCategoriesNames.map { LocalizationStrings(rawDictionary: $0) }
+        let rawLocation = rawDictionary[PayloadObjectKeys.Location.rawValue] as? [String: AnyObject] ?? [:]
+        location = Location(rawArray: rawLocation[LocationsKeys.Coordinates.rawValue] as? [Double] ?? [])
     }
 }
 

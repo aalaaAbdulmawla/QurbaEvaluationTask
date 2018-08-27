@@ -56,6 +56,12 @@ extension CardViewController: UITableViewDelegate {
 }
 
 extension CardViewController: CardViewControllerProtocol {
+    func getNavigationController() -> UINavigationController? {
+        guard let navigationController = UIApplication.shared.keyWindow?.rootViewController as? UINavigationController
+            else { return nil }
+        return navigationController
+    }
+    
     func startActivitityIndicator() {
         activitiyIndicator?.startAnimating()
     }

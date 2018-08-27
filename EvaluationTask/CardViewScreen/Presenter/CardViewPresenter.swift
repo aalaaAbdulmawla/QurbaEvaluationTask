@@ -12,7 +12,7 @@ import CoreLocation
 
 class CardViewPresenter: NSObject {
     fileprivate let locationManager:CLLocationManager = CLLocationManager()
-    fileprivate var firstTimeLoad = false
+    fileprivate var userLocation: Location?
     fileprivate var cellName =  "CardViewCell"
     private var nearbyLoactions: [CardViewModel]?
     weak fileprivate var viewDelegate: CardViewControllerProtocol?
@@ -22,15 +22,14 @@ class CardViewPresenter: NSObject {
     }
 }
 
-extension CardViewPresenter: CLLocationManagerDelegate {
-    
+extension CardViewPresenter: CLLocationManagerDelegate {    
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         let location:CLLocation = locations[0]
         if (location.horizontalAccuracy > 0) {
             self.locationManager.stopUpdatingLocation()
             print(location.coordinate)
-            if (!firstTimeLoad) {
-                firstTimeLoad = true
+            if (userLocation == nil) {
+                userLocation = Location(lat: location.coordinate.latitude, lng: location.coordinate.longitude)
                 getNearbyLocations()
             }
         }
@@ -68,7 +67,11 @@ extension CardViewPresenter: CardViewPresenterProtocol {
     }
     
     func didSelectRowAtndex(_ index: Int) {
-        
+        guard let userLocation = userLocation, let nearbyLoactions = nearbyLoactions else { return }
+        let mapViewPresenter = MapViewScreenPresenter(userLocation: userLocation, cardViewModels: nearbyLoactions, selectedIndex: index)
+        let viewController = MapViewScreenViewController.instantiateWith(mapViewPresenter)
+        mapViewPresenter.viewDelegate = viewController
+        viewDelegate?.getNavigationController()?.pushViewController(viewController, animated: true)
     }
     
     func viewDidLoad() {

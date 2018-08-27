@@ -23,6 +23,7 @@ struct CardViewModel {
     let shortDiscribtion: String
     let hashTags: String
     let facilitiesImgs: [String]
+    let locationCoordinates: Location
     
     init(nearbyPlaceEntity: PayloadObject) {
         name = nearbyPlaceEntity.name.english
@@ -34,6 +35,7 @@ struct CardViewModel {
         hashTags = getJoinedString(arr: nearbyPlaceEntity.hashtages, separator: " ", prefix: "#")
         facilitiesImgs = getFacilitiesImages(facilities: nearbyPlaceEntity.facilities.map { $0.english} )
         availability = isOpen(openingTimes: nearbyPlaceEntity.openingTimes)
+        locationCoordinates = nearbyPlaceEntity.location
     }
 }
 
